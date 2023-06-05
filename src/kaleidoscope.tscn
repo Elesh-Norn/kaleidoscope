@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj1l5jsddfo6s"]
+
+[ext_resource type="Shader" path="res://src/kaleidoscope_script.gdshader" id="1_rx3nh"]
+[ext_resource type="Script" path="res://src/kaleidoscope.gd" id="2_wd20o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ab6qv"]
+shader = ExtResource("1_rx3nh")
+shader_parameter/color_speed = 0.1
+shader_parameter/brightness = 0.01
+shader_parameter/complexity = 3.0
+shader_parameter/periodicity = 8.0
+shader_parameter/fractal_force = 1.5
+shader_parameter/a = Vector3(0.914, 0.832, 0.92)
+shader_parameter/b = Vector3(0.701, 0.468, 0.573)
+shader_parameter/c = Vector3(0.534, 1.034, 1.222)
+shader_parameter/d = Vector3(5.992, 2.194, 1.858)
+
+[node name="Canvas" type="ColorRect"]
+material = SubResource("ShaderMaterial_ab6qv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(39.9219, 23.9688)
+script = ExtResource("2_wd20o")

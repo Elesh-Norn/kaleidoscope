@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1nrkc3ga3q4c"]
+
+[ext_resource type="PackedScene" uid="uid://dj1l5jsddfo6s" path="res://src/kaleidoscope.tscn" id="1_ptx1g"]
+[ext_resource type="Script" path="res://src/Main.gd" id="1_q38d7"]
+
+[node name="ControlShader" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q38d7")
+
+[node name="Canvas" parent="." instance=ExtResource("1_ptx1g")]
+layout_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -25.0
+offset_right = 579.0
+grow_vertical = 0
+text = "Read Option"
